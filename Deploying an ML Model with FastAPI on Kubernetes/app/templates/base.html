@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h1>E-COMMERCE COSTUMERS </h1>
+<form action="/predict/">
+
+<table>
+
+  <tr>
+    <th>E-mail</th>
+    <th>Address</th>
+    <th>Avatar</th>
+    <th>Avg. Session Length*</th>
+    <th>Time on App*</th>
+    <th>Time on Website*</th>
+    <th>Length of Membership*</th>
+
+    
+  </tr>
+  <tr>
+    <th><input type="text" name="e-mail" value="e-mail"></th>
+    <th><input type="text" name="address" value="address"></th>
+    <th><input type="text" name="avatar" value="avatar"></th>
+    <th><input type="number" name="l1" value="33" min="0" max="100" step="any" ></th>
+    <th><input type="number" name="l2" value="12" min="0" max="100" step="any"></th>
+    <th><input type="number" name="l3" value="37" min="0" max="100" step="any"></th>
+    <th><input type="number" name="l4" value="3" min="0" max="100" step="any"></th>
+
+  </tr>
+    
+</table>
+
+<input type="submit" value="PREDICT">
+</form> 
+  
+<p>If you click the "Predict" button, the form-data will be sent to a page called "/predict.php".</p>
+
+
+<div id="content">
+  {% block content %}{% endblock %}
+</div>
+
+
+</body>
+</html>
